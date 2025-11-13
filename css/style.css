@@ -1,0 +1,169 @@
+﻿
+:root {
+    --text-white: #ffffff;
+    --text-light-grey: #e0e0e0;
+    --text-dark-grey: #a0a0a0;
+    --bg-dark: #333;
+    --bg-darker: #222;
+    --shadow-light: 0 0 5px rgba(255, 255, 255, 0.4);
+    --color-primary-base: #6c757d;
+    --color-secondary-base: #4a4a4a;
+    --shadow-hover: 0 4px 15px rgba(255, 255, 255, 0.2);
+    --color-primary-darker: #5a6268;
+}
+
+/* --- 2. ОСНОВНІ СТИЛІ ТІЛА --- */
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light-grey);
+    font-family: 'Exo 2', sans-serif;
+}
+
+.text-dark, .text-secondary {
+    color: var(--text-light-grey) !important;
+}
+
+
+/* --- 3. BOOTSTRAP КОЛЬОРИ В СІРІЙ ГАМІ --- */
+.bg-primary {
+    background-color: var(--color-primary-base) !important;
+}
+
+.bg-secondary {
+    background-color: var(--color-secondary-base) !important;
+}
+
+
+.btn-primary {
+    background-color: var(--color-primary-base);
+    border-color: var(--color-primary-base);
+    color: var(--text-white);
+}
+
+    .btn-primary:hover {
+        background-color: var(--color-primary-darker);
+        border-color: var(--color-primary-darker);
+        color: var(--text-white);
+    }
+
+.btn-outline-primary {
+    color: var(--text-white) !important;
+    border-color: var(--color-primary-base) !important;
+}
+
+    .btn-outline-primary:hover {
+        background-color: var(--color-primary-base) !important;
+        color: var(--text-white) !important;
+    }
+
+
+/* --- 4. СТИЛІ ГАЛЕРЕЙНИХ КАРТОК --- */
+.card {
+    background-color: #444;
+    border-color: #555 !important;
+}
+
+.card-header {
+    background-color: #333;
+    border-bottom: 1px solid #555;
+    color: var(--text-white);
+}
+
+/* ФІКС: Ефект підсвічування/анімації при ховері */
+.style-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+    .style-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover) !important;
+        border-color: var(--text-white) !important;
+    }
+
+
+.card-title {
+    color: var(--text-white) !important;
+    text-shadow: var(--shadow-light);
+}
+
+.card-text.text-muted {
+    color: var(--text-dark-grey) !important;
+    font-size: 0.9em;
+}
+
+
+/* --- 5. ЗАГОЛОВКИ ТА МОДАЛЬНІ ВІКНА --- */
+.text-primary, .modal-body .text-primary {
+    color: var(--text-white) !important;
+    text-shadow: var(--shadow-light);
+}
+
+.modal-body p {
+    color: var(--text-light-grey) !important;
+}
+
+.modal-content {
+    background-color: var(--bg-dark);
+    border-color: #555;
+}
+
+.modal-body .row img {
+    height: 400px !important;
+    object-fit: cover !important;
+    width: 100% !important;
+}
+
+
+/* --- 6. РЕЙТИНГ ТА ТАБЛИЦІ (ЧОРНО-БІЛІ ВІДТІНКИ) --- */
+.badge {
+    color: var(--text-white);
+    font-size: 0.8em;
+    padding: 0.5em 0.7em;
+    font-weight: 600;
+}
+
+    .badge.bg-success {
+        background-color: #4a4a4a !important;
+    }
+
+    .badge.bg-warning {
+        background-color: #6c757d !important;
+        color: var(--text-white) !important;
+    }
+
+    .badge.bg-danger {
+        background-color: #999999 !important;
+    }
+
+    .badge.bg-info {
+        background-color: #555 !important;
+    }
+
+.table {
+    --bs-table-bg: #444;
+    --bs-table-striped-bg: #4a4a4a;
+    --bs-table-hover-bg: #555;
+    color: var(--text-white) !important;
+    border: 1px solid #555;
+}
+
+    .table thead th {
+        color: var(--text-white) !important;
+    }
+
+    /* 🌟 ФІКС: Гарантуємо, що текст у всіх комірках таблиці (включаючи назви стилів) є білим */
+    .table tbody td {
+        color: var(--text-white) !important;
+    }
+
+
+/* --- 7. ФУТЕР --- */
+.footer .text-info {
+    color: var(--text-white) !important;
+    transition: color 0.2s;
+}
+
+    .footer .text-info:hover {
+        color: var(--text-light-grey) !important;
+    }
